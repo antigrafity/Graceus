@@ -7,7 +7,7 @@ header('Access-Control-Allow-Methods: POST');
 $recaptcha_secret_key = '6LeOZWUsAAAAAMh3cAta3oGbRAlpamD7uDSDuo61'; // Ganti dengan Secret Key dari Google reCAPTCHA
 
 // Email configuration
-$to_email = 'akbarsatrio@outlook.co.id'; // Change this to info@graseus.com in production
+$to_email = 'info@graseus.com'; // Change this to info@graseus.com in production
 $from_email = 'noreply@graseus.com';
 $from_name = 'Graseus Contact Form';
 

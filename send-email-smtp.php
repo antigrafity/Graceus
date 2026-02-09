@@ -96,7 +96,7 @@ try {
     // Uncomment untuk pakai Outlook/Hotmail
     $mail->Host = 'smtp-mail.outlook.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'akbarsatrio@outlook.co.id'; // Email Outlook
+    $mail->Username = 'info@graseus.com'; // Email Outlook
     $mail->Password = 'YOUR_OUTLOOK_PASSWORD'; // Password Outlook (GANTI INI!)
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587;
@@ -114,7 +114,7 @@ try {
     
     // Recipients
     $mail->setFrom('noreply@graseus.com', 'Graseus Contact Form');
-    $mail->addAddress('akbarsatrio@outlook.co.id'); // Email tujuan
+    $mail->addAddress('info@graseus.com'); // Email tujuan
     // $mail->addAddress('info@graseus.com'); // Bisa tambah multiple recipients
     $mail->addReplyTo($email, $name);
     

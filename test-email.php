@@ -6,7 +6,7 @@
  */
 
 // Email tujuan untuk testing
-$test_email = 'akbarsatrio@outlook.co.id';
+$test_email = 'info@graseus.com';
 
 echo "<h1>Email Configuration Test</h1>";
 echo "<hr>";

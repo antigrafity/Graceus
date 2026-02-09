@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background:
+      radial-gradient(circle at top left, rgba(0, 74, 173, 0.45), transparent 55%),
+      radial-gradient(circle at 20% 90%, rgba(46, 166, 255, 0.2), transparent 50%),
+      linear-gradient(180deg, #090f1f 0%, #060a16 55%, #04070f 100%);
+    color: #e7eefc;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply border border-line bg-slate-950/70 shadow-[0_26px_60px_rgba(3,9,26,0.55)] backdrop-blur-xl;
+  }
+
+  .glass-soft {
+    @apply border border-line bg-slate-950/50 backdrop-blur-xl;
+  }
+
+  .dropdown-menu {
+    @apply shadow-[0_20px_50px_rgba(3,9,26,0.65)];
+  }
+}
+
+@layer utilities {
+  .fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    animation: fadeUp 0.9s ease forwards;
+  }
+
+  .delay-1 {
+    animation-delay: 0.15s;
+  }
+
+  .delay-2 {
+    animation-delay: 0.3s;
+  }
+
+  .delay-3 {
+    animation-delay: 0.45s;
+  }
+
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

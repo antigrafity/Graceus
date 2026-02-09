@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Graseus Pte Ltd</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="sticky top-0 z-20 border-b border-line bg-slate-950/70 backdrop-blur">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex flex-wrap items-center justify-between gap-4 py-5">
+          <div class="flex items-center gap-4 uppercase tracking-[0.18em]">
+            <img src="/images/logo-white.png" alt="Graseus" class="h-10 w-auto" />
+          </div>
+          <nav class="flex flex-wrap items-center gap-4 text-[0.65rem] uppercase tracking-[0.2em] text-ink-soft">
+            <a class="border-b border-transparent pb-1 transition hover:border-primary hover:text-ink" href="#about">About</a>
+            <a class="border-b border-transparent pb-1 transition hover:border-primary hover:text-ink" href="#vision">Vision</a>
+            <a class="border-b border-transparent pb-1 transition hover:border-primary hover:text-ink" href="#solutions">Solutions</a>
+            <div class="relative dropdown-container">
+              <button class="border-b border-transparent pb-1 transition hover:border-primary hover:text-ink flex items-center gap-1 uppercase" id="productsDropdown">
+                Products
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div class="dropdown-menu hidden absolute top-full left-0 mt-2 glass-panel p-3 min-w-[220px] z-30">
+                <a href="products/echo-lite.html" class="block px-3 py-2 text-xs uppercase tracking-[0.2em] text-ink-soft hover:text-primary transition">ECHO-Lite</a>
+                <a href="products/sentra-one.html" class="block px-3 py-2 text-xs uppercase tracking-[0.2em] text-ink-soft hover:text-primary transition">SENTRA-One</a>
+                <a href="products/helicopter-spare-parts.html" class="block px-3 py-2 text-xs uppercase tracking-[0.2em] text-ink-soft hover:text-primary transition">Helicopter Spare Parts</a>
+                <a href="products/marine-systems.html" class="block px-3 py-2 text-xs uppercase tracking-[0.2em] text-ink-soft hover:text-primary transition">Marine Systems</a>
+                <a href="products/singularity-grid.html" class="block px-3 py-2 text-xs uppercase tracking-[0.2em] text-ink-soft hover:text-primary transition">SINGULARITY GRID</a>
+                <a href="products/chronolens.html" class="block px-3 py-2 text-xs uppercase tracking-[0.2em] text-ink-soft hover:text-primary transition">CHRONOLENS</a>
+              </div>
+            </div>
+            <a class="border-b border-transparent pb-1 transition hover:border-primary hover:text-ink" href="#contact">Contact</a>
+          </nav>
+          <a
+            class="border border-primary bg-primary px-4 py-2 text-[0.6rem] uppercase tracking-[0.3em] text-white shadow-[0_20px_40px_rgba(3,9,26,0.45)]"
+            href="#contact"
+          >
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="font-sans">
+      <!-- Hero Section -->
+      <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2000&q=80"
+            alt="Technology background"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/85 via-slate-950/75 to-slate-950/90 z-0"></div>
+        <!-- Content -->
+        <div class="max-w-6xl mx-auto px-6 py-32 text-center z-10 fade-up relative">
+          <h1 class="text-5xl font-display uppercase tracking-[0.05em] lg:text-7xl text-ink">
+            Purpose-built communication<br />and signal awareness products
+          </h1>
+          <p class="mt-8 text-lg text-ink-soft max-w-3xl mx-auto">
+            For controlled environments where control, clarity, and reliability matter.
+          </p>
+          <div class="mt-10 flex flex-wrap gap-4 justify-center">
+            <a
+              class="bg-primary px-8 py-4 text-xs uppercase tracking-[0.3em] text-white shadow-[0_20px_40px_rgba(3,9,26,0.45)]"
+              href="#solutions"
+            >
+              Explore Solutions
+            </a>
+            <a
+              class="border border-line glass-soft px-8 py-4 text-xs uppercase tracking-[0.3em] text-ink"
+              href="#about"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="max-w-6xl mx-auto px-6 py-20">
+        <div class="flex flex-col gap-3 mb-12">
+          <div class="text-primary text-xs uppercase tracking-[0.4em]">About Us</div>
+          <h2 class="text-2xl font-display uppercase tracking-[0.03em] lg:text-3xl">
+            Singapore-based specialist in communication environment management
+          </h2>
+        </div>
+        <div class="grid gap-8 lg:grid-cols-2">
+          <div class="glass-panel p-8 fade-up">
+            <p class="text-ink-soft leading-relaxed">
+              We are a Singapore-based company dedicated to professional environments where control,
+              clarity, and reliability matter. Our business is structured around a focused technology
+              portfolio developed to address clearly defined operational needs within authorized and
+              managed settings.
+            </p>
+            <p class="mt-6 text-ink-soft leading-relaxed">
+              We prioritize product integrity, responsible positioning, and long-term availability over 
+              volume trading.
+            </p>
+          </div>
+          <div class="glass-panel p-8 fade-up delay-1">
+            <p class="text-ink-soft leading-relaxed">
+              In parallel with our core product lines, we support select customers through the supply of
+              aviation and marine components, complementing our primary focus with dependable access to
+              specialized parts.
+            </p>
+            <p class="mt-6 text-ink-soft leading-relaxed">
+              Our work emphasizes product integrity, responsible positioning, and long-term availability 
+              rather than volume trading.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="vision" class="max-w-6xl mx-auto px-6 py-16">
+        <div class="flex flex-col gap-3">
+          <div class="text-primary text-xs uppercase tracking-[0.4em]">Vision</div>
+          <h2 class="text-2xl font-display uppercase tracking-[0.03em] lg:text-3xl">
+            Disciplined presence in communication environment management.
+          </h2>
+        </div>
+        <div class="glass-panel mt-6 p-6 fade-up delay-1">
+          To establish a respected presence as a specialist provider of communication environment and
+          signal awareness products, recognized for discipline, clarity, and professionalism.
+        </div>
+      </section>
+
+      <section id="mission" class="max-w-6xl mx-auto px-6 py-16">
+        <div class="flex flex-col gap-3">
+          <div class="text-primary text-xs uppercase tracking-[0.4em]">Mission</div>
+          <h2 class="text-2xl font-display uppercase tracking-[0.03em] lg:text-3xl">
+            Clear scope, dependable availability, and trusted delivery.
+          </h2>
+        </div>
+        <div class="mt-6 grid gap-5 md:grid-cols-2">
+          <div class="glass-panel p-6 fade-up">Deliver focused, well-scoped products designed for professional use.</div>
+          <div class="glass-panel p-6 fade-up delay-1">Maintain a clear and responsible product boundary.</div>
+          <div class="glass-panel p-6 fade-up delay-2">Support customers through consistent availability and documentation.</div>
+          <div class="glass-panel p-6 fade-up delay-3">Build long-term relationships based on trust and technical transparency.</div>
+        </div>
+      </section>
+
+      <section id="solutions" class="bg-slate-950/80 py-16">
+        <div class="max-w-6xl mx-auto px-6">
+          <div class="flex flex-col gap-3">
+            <div class="text-primary text-xs uppercase tracking-[0.4em]">Our Solutions</div>
+            <h2 class="text-2xl font-display uppercase tracking-[0.03em] lg:text-3xl">
+              Professional solutions for controlled communication environments.
+            </h2>
+          </div>
+          <div class="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            <div class="glass-panel p-6 fade-up">
+              <h3 class="text-lg font-display uppercase tracking-[0.03em]">Localized Communication Control Solution</h3>
+              <p class="mt-3 text-ink-soft">
+                Supports temporary, localized management of cellular communication conditions within
+                controlled environments. Emphasizes contained coverage, predictable performance, and
+                site-specific use without broader network impact.
+              </p>
+            </div>
+            <div class="glass-panel p-6 fade-up delay-1">
+              <h3 class="text-lg font-display uppercase tracking-[0.03em]">Signal Presence Awareness Solution</h3>
+              <p class="mt-3 text-ink-soft">
+                Provides foundational visibility into mobile signal presence within defined environments.
+                Designed for routine monitoring without tracking, interception, or automated network
+                interaction.
+              </p>
+            </div>
+            <div class="glass-panel p-6 fade-up delay-2">
+              <h3 class="text-lg font-display uppercase tracking-[0.03em]">Digital Evidence Management</h3>
+              <p class="mt-3 text-ink-soft">
+                Integrated platforms supporting investigation activities from data acquisition to analytics,
+                enabling secure evidence handling and strategic insights for informed decision-making.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" class="max-w-6xl mx-auto px-6 py-16">
+        <div class="flex flex-col gap-3">
+          <div class="text-primary text-xs uppercase tracking-[0.4em]">Our Products</div>
+          <h2 class="text-2xl font-display uppercase tracking-[0.03em] lg:text-3xl">
+            Product-based capabilities with defined scope and use.
+          </h2>
+        </div>
+        <div class="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <a href="products/echo-lite.html" class="glass-panel p-6 fade-up block hover:border-primary/60 transition">
+            <div class="inline-flex items-center gap-2 border border-primary/40 bg-primary/20 px-3 py-1 text-[0.7rem] uppercase tracking-[0.2em] text-primary">
+              Secure Communication Mgmt
+            </div>
+            <img
+              class="mt-4 h-44 w-full object-cover"
+              src="/images/echo-lite.jpg?auto=format&fit=crop&w=900&q=80"
+              alt="Compact communication device"
+            />
+            <h3 class="mt-4 text-lg font-display uppercase tracking-[0.03em]">ECHO-Lite</h3>
+            <p class="mt-3 text-ink-soft">
+              Mobile signal blocking solution for short-range, site-specific use. Designed for rapid
+              deployment, focused operation, and direct user control.
+            </p>
+          </a>
+          <a href="products/sentra-one.html" class="glass-panel p-6 fade-up delay-1 block hover:border-primary/60 transition">
+            <div class="inline-flex items-center gap-2 border border-primary/40 bg-primary/20 px-3 py-1 text-[0.7rem] uppercase tracking-[0.2em] text-primary">
+              Mobile Network Monitoring
+            </div>
+            <img
+              class="mt-4 h-44 w-full object-cover"
+              src="/images/sentra-one.jpg"
+              alt="Signal scanning workstation"
+            />
+            <h3 class="mt-4 text-lg font-display uppercase tracking-[0.03em]">SENTRA-One</h3>
+            <p class="mt-3 text-ink-soft">
+              Ultra-lightweight, entry-level mobile signal scanner for IMSI presence detection.
+              Prioritizes simplicity, durability, and affordability.
+            </p>
+          </a>
+          <a href="products/helicopter-spare-parts.html" class="glass-panel p-6 fade-up delay-2 block hover:border-primary/60 transition">
+            <div class="inline-flex items-center gap-2 border border-primary/40 bg-primary/20 px-3 py-1 text-[0.7rem] uppercase tracking-[0.2em] text-primary">
+              Aviation Components
+            </div>
+            <img
+              class="mt-4 h-44 w-full object-cover"
+              src="/images/helicopter-sparepart.jpg"
+              alt="Aviation spare parts storage"
+            />
+            <h3 class="mt-4 text-lg font-display uppercase tracking-[0.03em]">Helicopter Spare Parts</h3>
+            <p class="mt-3 text-ink-soft">
+              Supplies maintenance-ready helicopter spare parts for authorized operators and
+              maintenance organizations, supporting reliable aircraft operation.
+            </p>
+          </a>
+          <a href="products/marine-systems.html" class="glass-panel p-6 fade-up delay-3 block hover:border-primary/60 transition">
+            <div class="inline-flex items-center gap-2 border border-primary/40 bg-primary/20 px-3 py-1 text-[0.7rem] uppercase tracking-[0.2em] text-primary">
+              Marine Systems
+            </div>
+            <img
+              class="mt-4 h-44 w-full object-cover"
+              src="/images/marine.jpg"
+              alt="Marine engine components"
+            />
+            <h3 class="mt-4 text-lg font-display uppercase tracking-[0.03em]">Marine Systems &amp; Engine Components</h3>
+            <p class="mt-3 text-ink-soft">
+              Marine navigation, propulsion, and engine components for commercial and professional
+              maritime environments.
+            </p>
+          </a>
+          <a href="products/singularity-grid.html" class="glass-panel p-6 fade-up block hover:border-primary/60 transition">
+            <div class="inline-flex items-center gap-2 border border-primary/40 bg-primary/20 px-3 py-1 text-[0.7rem] uppercase tracking-[0.2em] text-primary">
+              Digital Data Evidence &amp; Analytics
+            </div>
+            <img
+              class="mt-4 h-44 w-full object-cover"
+              src="/images/singularity.jpg"
+              alt="Digital forensics workstation"
+            />
+            <h3 class="mt-4 text-lg font-display uppercase tracking-[0.03em]">SINGULARITY GRID</h3>
+            <p class="mt-3 text-ink-soft">
+              Integrated digital forensics platform supporting investigations from data acquisition to final reporting,
+              covering computer, mobile, database, and video forensics, with secure evidence storage and centralized analytics.
+            </p>
+          </a>
+          <a href="products/chronolens.html" class="glass-panel p-6 fade-up delay-1 block hover:border-primary/60 transition">
+            <div class="inline-flex items-center gap-2 border border-primary/40 bg-primary/20 px-3 py-1 text-[0.7rem] uppercase tracking-[0.2em] text-primary">
+              Digital Data Evidence &amp; Analytics
+            </div>
+            <img
+              class="mt-4 h-44 w-full object-cover"
+              src="/images/chronolens.jpg"
+              alt="Data intelligence platform"
+            />
+            <h3 class="mt-4 text-lg font-display uppercase tracking-[0.03em]">CHRONOLENS</h3>
+            <p class="mt-3 text-ink-soft">
+              Advanced data analytics platform collecting and processing information from multiple sources
+              to deliver demographic, behavioral, and social insights for audience mapping and strategic decision-making.
+            </p>
+          </a>
+        </div>
+      </section>
+
+      <section id="why" class="max-w-6xl mx-auto px-6 py-16">
+        <div class="flex flex-col gap-3">
+          <div class="text-primary text-xs uppercase tracking-[0.4em]">Why Choose Us</div>
+          <h2 class="text-2xl font-display uppercase tracking-[0.03em] lg:text-3xl">
+            Enterprise-grade focus with long-term continuity.
+          </h2>
+        </div>
+        <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="glass-soft p-5 uppercase tracking-[0.08em] text-xs text-ink-soft">Strong focus on proprietary core products.</div>
+          <div class="glass-soft p-5 uppercase tracking-[0.08em] text-xs text-ink-soft">Clear and responsible product positioning.</div>
+          <div class="glass-soft p-5 uppercase tracking-[0.08em] text-xs text-ink-soft">Singapore-based presence and governance.</div>
+          <div class="glass-soft p-5 uppercase tracking-[0.08em] text-xs text-ink-soft">Long-term supply and portfolio continuity.</div>
+          <div class="glass-soft p-5 uppercase tracking-[0.08em] text-xs text-ink-soft">Professional, enterprise-oriented engagement.</div>
+        </div>
+      </section>
+
+      <section id="contact" class="bg-gradient-to-br from-primary/20 via-transparent to-accent/10 py-16">
+        <div class="max-w-6xl mx-auto px-6 grid gap-8 lg:grid-cols-2">
+          <div class="fade-up">
+            <div class="text-primary text-xs uppercase tracking-[0.4em]">Contact Us</div>
+            <h2 class="mt-3 text-2xl font-display uppercase tracking-[0.03em] lg:text-3xl">
+              Start a responsible and structured engagement.
+            </h2>
+            <p class="mt-5 text-ink-soft">
+              Fill in the form and our team will respond. Installation, maintenance, operation, and
+              regulatory compliance remain the responsibility of the end user or appointed service
+              providers.
+            </p>
+            <div class="glass-panel mt-6 p-5 text-sm">
+              <strong>Email</strong><br />
+              info@graseus.com
+            </div>
+          </div>
+          <form id="contactForm" class="glass-panel p-6 fade-up delay-1 flex flex-col gap-4" method="post">
+            <input
+              class="w-full border border-line bg-slate-950/70 px-4 py-3 text-sm text-ink outline-none focus:border-accent"
+              type="text"
+              name="name"
+              placeholder="Full Name"
+              required
+            />
+            <input
+              class="w-full border border-line bg-slate-950/70 px-4 py-3 text-sm text-ink outline-none focus:border-accent"
+              type="email"
+              name="email"
+              placeholder="Work Email"
+              required
+            />
+            <input
+              class="w-full border border-line bg-slate-950/70 px-4 py-3 text-sm text-ink outline-none focus:border-accent"
+              type="text"
+              name="company"
+              placeholder="Company / Organization"
+            />
+            <textarea
+              class="w-full border border-line bg-slate-950/70 px-4 py-3 text-sm text-ink outline-none focus:border-accent"
+              name="message"
+              placeholder="Tell us about your needs"
+              rows="4"
+              required
+            ></textarea>
+            <label class="flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-ink-soft">
+              <input class="h-4 w-4 accent-primary" type="checkbox" required />
+              I confirm that this inquiry is for authorized and managed use cases.
+            </label>
+            <button
+              class="bg-primary px-6 py-3 text-xs uppercase tracking-[0.3em] text-white shadow-[0_20px_40px_rgba(3,9,26,0.45)]"
+              type="submit"
+            >
+              Submit Inquiry
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-line py-12 text-sm text-ink-soft">
+      <div class="max-w-6xl mx-auto px-6">
+        © Graseus Pte Ltd,. All rights reserved. All products are supplied on a product-only basis.
+        Installation, maintenance, operation, and regulatory compliance remain the responsibility of
+        the end user or appointed service providers.
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

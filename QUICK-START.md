@@ -2,6 +2,23 @@
 
 ## Cara Tercepat Setup Email (5 Menit)
 
+### Step 0: Setup Google reCAPTCHA (IMPORTANT! 🛡️)
+
+**Protect form dari spam dan bot attacks:**
+
+1. Daftar di: https://www.google.com/recaptcha/admin/create
+2. Pilih **reCAPTCHA v2** → "I'm not a robot" Checkbox, add domain `graseus.com`
+3. Copy **Site Key** dan **Secret Key**
+4. Ganti di files berikut:
+   - `index.html` line ~383: `data-sitekey="YOUR_SITE_KEY_HERE"` (di dalam form)
+   - `send-email.php` line 7: `$recaptcha_secret_key = 'YOUR_SECRET_KEY_HERE'`
+
+**📖 Detailed guide: Baca [RECAPTCHA-SETUP.md](RECAPTCHA-SETUP.md)**
+
+**✅ Checkbox "I'm not a robot" akan muncul di form sebelum submit button!**
+
+---
+
 ### Step 1: Upload Files ke VPS
 Upload semua files ke VPS:
 ```bash

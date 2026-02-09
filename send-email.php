@@ -3,6 +3,9 @@ header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: POST');
 
+// reCAPTCHA configuration
+$recaptcha_secret_key = '6LeOZWUsAAAAAMh3cAta3oGbRAlpamD7uDSDuo61'; // Ganti dengan Secret Key dari Google reCAPTCHA
+
 // Email configuration
 $to_email = 'akbarsatrio@outlook.co.id'; // Change this to info@graseus.com in production
 $from_email = 'noreply@graseus.com';
@@ -13,6 +16,42 @@ $name = isset($_POST['name']) ? strip_tags(trim($_POST['name'])) : '';
 $email = isset($_POST['email']) ? filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL) : '';
 $company = isset($_POST['company']) ? strip_tags(trim($_POST['company'])) : '';
 $message = isset($_POST['message']) ? strip_tags(trim($_POST['message'])) : '';
+$recaptcha_response = isset($_POST['g-recaptcha-response']) ? $_POST['g-recaptcha-response'] : '';
+
+// Verify reCAPTCHA v2
+if (empty($recaptcha_response)) {
+    http_response_code(400);
+    echo json_encode(['success' => false, 'message' => 'Please complete the reCAPTCHA verification.']);
+    exit;
+}
+
+if (!empty($recaptcha_secret_key) && $recaptcha_secret_key !== '6LeOZWUsAAAAAMh3cAta3oGbRAlpamD7uDSDuo61') {
+    $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
+    $recaptcha_data = array(
+        'secret' => $recaptcha_secret_key,
+        'response' => $recaptcha_response,
+        'remoteip' => $_SERVER['REMOTE_ADDR']
+    );
+    
+    $recaptcha_options = array(
+        'http' => array(
+            'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+            'method'  => 'POST',
+            'content' => http_build_query($recaptcha_data)
+        )
+    );
+    
+    $recaptcha_context  = stream_context_create($recaptcha_options);
+    $recaptcha_result = file_get_contents($recaptcha_url, false, $recaptcha_context);
+    $recaptcha_json = json_decode($recaptcha_result);
+    
+    // Check reCAPTCHA v2 verification (no score, just success/fail)
+    if (!$recaptcha_json->success) {
+        http_response_code(400);
+        echo json_encode(['success' => false, 'message' => 'reCAPTCHA verification failed. Please try again.']);
+        exit;
+    }
+}
 
 // Validation
 if (empty($name) || empty($email) || empty($message)) {

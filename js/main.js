@@ -27,11 +27,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       const originalBtnText = submitBtn.innerHTML;
-      const formData = new FormData(contactForm);
+
+      // Get reCAPTCHA v2 response
+      const recaptchaResponse = typeof grecaptcha !== 'undefined' ? grecaptcha.getResponse() : '';
+      
+      if (!recaptchaResponse) {
+        showMessage('Please complete the reCAPTCHA verification.', 'error');
+        return;
+      }
 
       // Disable button and show loading state
       submitBtn.disabled = true;
       submitBtn.innerHTML = 'SENDING...';
+
+      // Add reCAPTCHA response to form data
+      const formData = new FormData(contactForm);
+      formData.append('g-recaptcha-response', recaptchaResponse);
 
       // Send form data via fetch
       fetch('send-email.php', {
@@ -41,11 +52,12 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(response => response.json())
       .then(data => {
         if (data.success) {
-          // Show success message
           showMessage(data.message, 'success');
           contactForm.reset();
+          if (typeof grecaptcha !== 'undefined') {
+            grecaptcha.reset();
+          }
         } else {
-          // Show error message
           showMessage(data.message, 'error');
         }
       })
@@ -54,7 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
         showMessage('Sorry, there was an error sending your message. Please try again later.', 'error');
       })
       .finally(() => {
-        // Re-enable button
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalBtnText;
       });

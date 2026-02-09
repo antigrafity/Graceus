@@ -29,6 +29,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+    
+    <!-- Google reCAPTCHA v2 -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <body>
     <header class="sticky top-0 z-20 border-b border-line bg-slate-950/70 backdrop-blur">
@@ -378,6 +381,10 @@
               <input class="h-4 w-4 accent-primary" type="checkbox" required />
               I confirm that this inquiry is for authorized and managed use cases.
             </label>
+            
+            <!-- reCAPTCHA v2 Widget -->
+            <div class="g-recaptcha" data-sitekey="6LeOZWUsAAAAANMfOzfToT2GDBQ6vHqFzaZzCu7G" data-theme="dark"></div>
+            
             <button
               class="bg-primary px-6 py-3 text-xs uppercase tracking-[0.3em] text-white shadow-[0_20px_40px_rgba(3,9,26,0.45)]"
               type="submit"

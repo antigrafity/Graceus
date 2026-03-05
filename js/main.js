@@ -91,4 +91,35 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(() => messageDiv.remove(), 300);
     }, 5000);
   }
+
+  // Brand tabs switcher for helicopter spare parts
+  const brandTabs = document.querySelectorAll('.brand-tab');
+  const brandContents = document.querySelectorAll('.brand-content');
+
+  if (brandTabs.length > 0 && brandContents.length > 0) {
+    brandTabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        const targetBrand = this.getAttribute('data-brand');
+        
+        // Remove active class from all tabs
+        brandTabs.forEach(t => t.classList.remove('active'));
+        
+        // Add active class to clicked tab
+        this.classList.add('active');
+        
+        // Hide all brand contents
+        brandContents.forEach(content => {
+          content.classList.remove('active');
+          content.classList.add('hidden');
+        });
+        
+        // Show target brand content
+        const targetContent = document.querySelector(`.brand-content[data-brand="${targetBrand}"]`);
+        if (targetContent) {
+          targetContent.classList.remove('hidden');
+          targetContent.classList.add('active');
+        }
+      });
+    });
+  }
 });

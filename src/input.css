@@ -24,6 +24,31 @@
   .dropdown-menu {
     @apply shadow-[0_20px_50px_rgba(3,9,26,0.65)];
   }
+
+  /* Helicopter spare parts styles */
+  .part-card {
+    clip-path: polygon(0 0, 90% 0, 100% 10%, 100% 100%, 9% 100%, 0 90%);
+  }
+
+  .brand-tab {
+    @apply transition-all duration-300;
+  }
+
+  .brand-tab.active {
+    @apply border-primary bg-primary/10 text-primary;
+  }
+
+  .brand-content {
+    @apply transition-opacity duration-300;
+  }
+
+  .brand-content.hidden {
+    @apply opacity-0;
+  }
+
+  .brand-content.active {
+    @apply opacity-100;
+  }
 }
 
 @layer utilities {

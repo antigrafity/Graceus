@@ -21,6 +21,14 @@
     @apply border border-line bg-slate-950/50 backdrop-blur-xl;
   }
 
+  .partner-card {
+    @apply border border-line bg-white/90 transition-colors;
+  }
+
+  .partner-card:hover {
+    @apply bg-white;
+  }
+
   .dropdown-menu {
     @apply shadow-[0_20px_50px_rgba(3,9,26,0.65)];
   }

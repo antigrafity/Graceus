@@ -1,24 +1,7 @@
 document.documentElement.classList.add("js-enabled");
 
-// Dropdown toggle
+// Products mega menu opens on hover / keyboard focus via CSS only (see src/input.css)
 document.addEventListener("DOMContentLoaded", function () {
-  const dropdownBtn = document.getElementById("productsDropdown");
-  const dropdownMenu = document.querySelector(".dropdown-menu");
-
-  if (dropdownBtn && dropdownMenu) {
-    dropdownBtn.addEventListener("click", function (e) {
-      e.preventDefault();
-      dropdownMenu.classList.toggle("hidden");
-    });
-
-    // Close dropdown when clicking outside
-    document.addEventListener("click", function (e) {
-      if (!e.target.closest(".dropdown-container")) {
-        dropdownMenu.classList.add("hidden");
-      }
-    });
-  }
-
   // Contact form handler
   const contactForm = document.getElementById("contactForm");
   if (contactForm) {

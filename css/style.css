@@ -595,10 +595,47 @@ body {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
+/* Hover-driven products menu */
+
 .dropdown-menu {
   --tw-shadow: 0 20px 50px rgba(3,9,26,0.65);
   --tw-shadow-colored: 0 20px 50px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+}
+
+/* Invisible bridge so the gap between trigger and panel stays hoverable */
+
+.dropdown-menu::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -0.75rem;
+  height: 0.75rem;
+}
+
+.dropdown-container:hover .dropdown-menu,
+  .dropdown-container:focus-within .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.dropdown-container svg {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+.dropdown-container:hover svg,
+  .dropdown-container:focus-within svg {
+  transform: rotate(180deg);
 }
 
 /* Helicopter spare parts styles */
@@ -633,10 +670,6 @@ body {
 
 .brand-content.active {
   opacity: 1;
-}
-
-.fixed {
-  position: fixed;
 }
 
 .absolute {

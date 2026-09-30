@@ -29,8 +29,41 @@
     @apply bg-white;
   }
 
+  /* Hover-driven products menu */
   .dropdown-menu {
     @apply shadow-[0_20px_50px_rgba(3,9,26,0.65)];
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(6px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  }
+
+  /* Invisible bridge so the gap between trigger and panel stays hoverable */
+  .dropdown-menu::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -0.75rem;
+    height: 0.75rem;
+  }
+
+  .dropdown-container:hover .dropdown-menu,
+  .dropdown-container:focus-within .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .dropdown-container svg {
+    @apply transition-transform duration-200;
+  }
+
+  .dropdown-container:hover svg,
+  .dropdown-container:focus-within svg {
+    transform: rotate(180deg);
   }
 
   /* Helicopter spare parts styles */

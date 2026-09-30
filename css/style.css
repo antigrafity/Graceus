@@ -1140,6 +1140,10 @@ body {
   text-align: center;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
 .font-display {
   font-family: Oswald, sans-serif;
 }
@@ -1298,6 +1302,14 @@ body {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+/* Rata kiri-kanan untuk paragraf deskripsi panjang */
+
+.text-justify {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
 .fade-up {

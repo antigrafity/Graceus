@@ -93,6 +93,13 @@
 }
 
 @layer utilities {
+  /* Rata kiri-kanan untuk paragraf deskripsi panjang */
+  .text-justify {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
+
   .fade-up {
     opacity: 0;
     transform: translateY(24px);
